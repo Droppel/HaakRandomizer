@@ -22,6 +22,18 @@ namespace HaakRandomizer
             this.server = host;
         }
 
+        public static void TryDisconnect() {
+            try {
+                if (session != null) {
+                    session.Socket.DisconnectAsync();
+                    session = null;
+                }
+                Plugin.PatchLogger.LogInfo("Disconnected from Archipelago");
+            } catch (Exception e) {
+                Plugin.PatchLogger.LogInfo($"Encountered an error disconnecting from Archipelago: {e}");
+            }
+        }
+
         public void Connect()
         {
             LoginResult result = session.TryConnectAndLogin("Haak", this.slot, ItemsHandlingFlags.AllItems);

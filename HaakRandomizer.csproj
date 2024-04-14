@@ -20,7 +20,6 @@
     <PackageReference Include="BepInEx.Analyzers" Version="1.*" PrivateAssets="all" />
     <PackageReference Include="BepInEx.Core" Version="5.*" />
     <PackageReference Include="BepInEx.PluginInfoProps" Version="2.*" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="UnityEngine.Modules" Version="2019.3.0" IncludeAssets="compile" />
   </ItemGroup>
   
@@ -31,6 +30,12 @@
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
       <HintPath>..\..\SteamLibrary\steamapps\common\Haak\haak_Data\Managed\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="LuxkoCore">
+      <HintPath>..\..\SteamLibrary\steamapps\common\Haak\haak_Data\Managed\LuxkoCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\SteamLibrary\steamapps\common\Haak\BepInEx\core\Newtonsoft.Json.dll</HintPath>
     </Reference>
   </ItemGroup>
   
